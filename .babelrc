@@ -1,5 +1,7 @@
 {
 	"plugins": [
-		"@babel/plugin-proposal-class-properties"
+		// NOTE: the custom name "class-props" is for github actions
+		// as it complains about duplicate plugins on build step
+		["@babel/plugin-proposal-class-properties", {}, "class-props"]
 	]
 }
