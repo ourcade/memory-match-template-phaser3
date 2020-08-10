@@ -63,7 +63,7 @@ export default class Game extends Phaser.Scene
 			.setOrigin(0.5)
 
 		this.countdown = new CountdownController(this, timerLabel)
-		this.countdown.start(this.handleCountdownFinished.bind(this), 5000)
+		this.countdown.start(this.handleCountdownFinished.bind(this))
 
 		this.physics.add.collider(this.player, this.boxGroup, this.handlePlayerBoxCollide, undefined, this)
 	}
