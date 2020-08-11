@@ -44,7 +44,3 @@ There's also information on using Chrome's DevTools and navigating Phaser's offi
 ## License
 
 [MIT License](https://github.com/ourcade/memory-match-template-phaser3/blob/master/LICENSE)
-
-## License
-
-[MIT License](https://github.com/ourcade/memory-match-template-phaser3/blob/master/LICENSE)
