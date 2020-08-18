@@ -179,6 +179,9 @@ export default class Game extends Phaser.Scene
 		item.setData('sorted', true)
 		item.setDepth(2000)
 
+		item.setActive(true)
+		item.setVisible(true)
+
 		item.scale = 0
 		item.alpha = 0
 
@@ -205,9 +208,6 @@ export default class Game extends Phaser.Scene
 				this.checkForMatch()
 			}
 		})
-
-		this.activeBox.setFrame(10)
-		this.activeBox = undefined
 	}
 
 	handleBearSelected()
@@ -253,6 +253,9 @@ export default class Game extends Phaser.Scene
 				duration: 300,
 				delay: 1000,
 				onComplete: () => {
+					this.itemsGroup.killAndHide(first.item)
+					this.itemsGroup.killAndHide(second.item)
+
 					first.box.setData('opened', false)
 					second.box.setData('opened', false)
 				}
@@ -325,6 +328,9 @@ export default class Game extends Phaser.Scene
 		if (spaceJustPressed && this.activeBox)
 		{
 			this.openBox(this.activeBox)
+
+			this.activeBox.setFrame(10)
+			this.activeBox = undefined
 		}
 	}
 
